@@ -5,7 +5,15 @@
   justify-content: center;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  /* Removed overflow: hidden so tall letters don't get clipped */
+}
+
+@media (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+    padding-top: 38vh; /* Give massive headroom for the tall letter */
+    padding-bottom: 15vh;
+  }
 }
 
 .envelopeWrapper {
@@ -15,6 +23,14 @@
   cursor: pointer;
   z-index: 10;
   filter: drop-shadow(0 15px 35px rgba(44, 36, 32, 0.15));
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .envelopeWrapper {
+    width: 290px;
+    height: 200px;
+  }
 }
 
 .envelopeBack {
