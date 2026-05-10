@@ -142,3 +142,21 @@
   z-index: 2; /* Between back and pocket */
   width: 90%;
 }
+
+.scrollText {
+  margin-top: 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-heading);
+  opacity: 0.8;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scrollIcon {
+  font-size: 2rem;
+}

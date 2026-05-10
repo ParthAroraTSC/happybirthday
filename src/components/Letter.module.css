@@ -25,7 +25,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--color-heading);
   margin-bottom: 2rem;
   text-align: center;
@@ -35,7 +35,7 @@
 
 .body {
   font-family: var(--font-body);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--color-text);
   line-height: 2; /* 32px line height matches the 32px gradient lines */
   text-align: center;
@@ -65,11 +65,11 @@
     padding: 1.5rem 1.2rem;
   }
   .title {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
   .body {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.8;
     margin-bottom: 1rem;
   }

@@ -84,6 +84,23 @@ export default function EnvelopeSurprise({ onOpenComplete }) {
             Tap to Open Your Surprise
           </motion.p>
         )}
+        {isOpened && (
+          <motion.div 
+            className={styles.scrollText}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            <p>Scroll down</p>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className={styles.scrollIcon}
+            >
+              ↓
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </section>
   );
