@@ -1,0 +1,115 @@
+.gallerySection {
+  padding: 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+.galleryTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-heading);
+  margin-bottom: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+}
+
+.memoryWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 260px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.memoryWrapper:hover {
+  transform: scale(1.05) translateY(-10px) !important;
+  z-index: 10;
+}
+
+.polaroid {
+  background: white;
+  padding: 12px 12px 40px 12px;
+  box-shadow: 0 10px 25px rgba(44, 36, 32, 0.08);
+  border-radius: 2px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.4s ease;
+}
+
+.memoryWrapper:hover .polaroid {
+  box-shadow: 0 20px 40px rgba(44, 36, 32, 0.15);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 236px;
+  background: linear-gradient(135deg, #e6dace 0%, #f4eee8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Simulated photo noise/texture */
+.imagePlaceholder::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.caption {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.messageBox {
+  background: #fffcf8; /* matches the letter */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 
+    inset 0 0 10px rgba(0,0,0,0.01),
+    0 4px 15px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+/* Little speech bubble arrow pointing to polaroid */
+.messageBox::before {
+  content: '';
+  position: absolute;
+  top: -6px; left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px; height: 12px;
+  background: #fffcf8;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  border-left: 1px solid rgba(0,0,0,0.03);
+}

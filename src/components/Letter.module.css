@@ -1,0 +1,61 @@
+.letterPaper {
+  background: #fffcf8; /* Warm off-white */
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.02),
+    0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.03);
+  position: relative;
+}
+
+/* Subtle elegant line pattern on the paper */
+.letterPaper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: repeating-linear-gradient(transparent, transparent 31px, rgba(0,0,0,0.03) 31px, rgba(0,0,0,0.03) 32px);
+  pointer-events: none;
+  opacity: 0.5;
+  border-radius: 8px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-heading);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-text);
+  line-height: 2; /* 32px line height matches the 32px gradient lines */
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 90%;
+  position: relative;
+  z-index: 1;
+}
+
+.body p {
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-heading);
+  align-self: flex-end;
+  margin-right: 1rem;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}

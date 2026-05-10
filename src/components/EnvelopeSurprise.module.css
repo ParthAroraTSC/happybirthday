@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.envelopeWrapper {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  cursor: pointer;
+  z-index: 10;
+  filter: drop-shadow(0 15px 35px rgba(44, 36, 32, 0.15));
+}
+
+.envelopeBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #c3a182; /* Inside darker kraft paper */
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.envelopePocket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 4px 4px;
+  z-index: 3;
+  overflow: hidden;
+  filter: drop-shadow(0 -2px 10px rgba(0,0,0,0.05));
+}
+
+.envelopeLeft {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #d1b194;
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  z-index: 1;
+}
+
+.envelopeRight {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #d1b194;
+  clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+  z-index: 1;
+}
+
+.envelopeBottom {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: #daba9e; /* Front bottom lighter flap */
+  clip-path: polygon(0 100%, 50% 50%, 100% 100%);
+  z-index: 2;
+  filter: drop-shadow(0 -2px 4px rgba(0,0,0,0.03));
+}
+
+.envelopeFlap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d8b89c; /* Top flap */
+  border-radius: 4px 4px 0 0;
+  z-index: 5;
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+  transform-origin: top;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+.heartSeal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(circle at 35% 35%, #e06c75, #c0392b);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 
+    inset 0 0 6px rgba(0,0,0,0.3),
+    inset 0 0 2px rgba(255,255,255,0.4),
+    0 4px 10px rgba(0,0,0,0.2);
+}
+
+.heartSeal::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 57, 43, 0.4);
+  filter: blur(0.5px);
+}
+
+.sealHeart {
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.3));
+}
+
+.tapText {
+  margin-top: 3rem;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-heading);
+  opacity: 0.8;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.letterContainer {
+  position: absolute;
+  bottom: 10px; /* Hidden deep inside the envelope */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* Between back and pocket */
+  width: 90%;
+}
