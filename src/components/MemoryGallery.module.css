@@ -76,6 +76,19 @@
   pointer-events: none;
 }
 
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rotatedMedia {
+  width: 210px !important;
+  height: 340px !important;
+  transform: rotate(-90deg);
+}
+
 .caption {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -128,5 +141,9 @@
   }
   .landscapeWrapper .imagePlaceholder {
     height: 180px;
+  }
+  .rotatedMedia {
+    width: 180px !important;
+    height: 280px !important;
   }
 }
