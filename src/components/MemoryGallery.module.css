@@ -113,3 +113,20 @@
   border-top: 1px solid rgba(0,0,0,0.03);
   border-left: 1px solid rgba(0,0,0,0.03);
 }
+
+.landscapeWrapper {
+  width: 340px;
+}
+
+.landscapeWrapper .imagePlaceholder {
+  height: 210px;
+}
+
+@media (max-width: 768px) {
+  .landscapeWrapper {
+    width: 280px;
+  }
+  .landscapeWrapper .imagePlaceholder {
+    height: 180px;
+  }
+}

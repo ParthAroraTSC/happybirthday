@@ -7,8 +7,8 @@ import { Heart } from "lucide-react";
 export default function MemoryGallery() {
   const memories = [
     { id: 1, caption: "Our first adventure", message: "I still remember how much we laughed that day. It was the beginning of everything.", angle: -3, delay: 0.1 },
-    { id: 2, caption: "That unforgettable sunset", message: "Watching the colors change in the sky with you is my favorite memory of the summer.", angle: 2, delay: 0.3 },
-    { id: 3, caption: "Quiet mornings", message: "Just coffee, comfortable silence, and knowing I wouldn't want to be anywhere else.", angle: -2, delay: 0.5 },
+    { id: 2, caption: "That unforgettable sunset", message: "Watching the colors change in the sky with you is my favorite memory of the summer.", angle: 2, delay: 0.3, isLandscape: true },
+    { id: 3, caption: "Quiet mornings", message: "Just coffee, comfortable silence, and knowing I wouldn't want to be anywhere else.", angle: -2, delay: 0.5, isLandscape: true },
     { id: 4, caption: "Your beautiful smile", message: "The way your eyes light up when you smile is still my absolute favorite thing in the world.", angle: 4, delay: 0.7 },
   ];
 
@@ -28,7 +28,7 @@ export default function MemoryGallery() {
         {memories.map((memory) => (
           <motion.div
             key={memory.id}
-            className={styles.memoryWrapper}
+            className={`${styles.memoryWrapper} ${memory.isLandscape ? styles.landscapeWrapper : ""}`}
             initial={{ opacity: 0, y: 50, rotate: 0 }}
             whileInView={{ opacity: 1, y: 0, rotate: memory.angle }}
             viewport={{ once: true, margin: "-50px" }}
