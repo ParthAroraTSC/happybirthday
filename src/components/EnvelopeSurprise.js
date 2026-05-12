@@ -5,14 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Heart } from "lucide-react";
 import styles from "./EnvelopeSurprise.module.css";
 import Letter from "./Letter";
+import PetalEffect from "./PetalEffect";
 
 export default function EnvelopeSurprise({ onOpenComplete }) {
   const [isOpening, setIsOpening] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
+  const [showPetals, setShowPetals] = useState(false);
 
   const handleTap = () => {
     if (isOpening || isOpened) return;
     setIsOpening(true);
+    setShowPetals(true);
 
     // After the letter fully slides out, we can signal the parent to show the gallery
     setTimeout(() => {
@@ -35,6 +38,8 @@ export default function EnvelopeSurprise({ onOpenComplete }) {
         transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }} // Apple-style smooth easing
         whileHover={!isOpening ? { y: -5 } : {}}
       >
+        {showPetals && <PetalEffect count={40} />}
+        
         <div className={styles.envelopeBack}></div>
 
         {/* The Letter emerging from the envelope */}
