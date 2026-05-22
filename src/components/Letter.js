@@ -25,7 +25,7 @@ export default function Letter({ isOpening }) {
         animate={{ opacity: isOpening ? 1 : 0, y: isOpening ? 0 : 10 }}
         transition={{ duration: 1, delay: 1.5 }}
       >
-        Happy Birthday Kiddo!!
+        Happy Birthday Buddy!!
       </motion.h2>
 
       <motion.div
@@ -35,7 +35,7 @@ export default function Letter({ isOpening }) {
         transition={{ duration: 1, delay: 1.8 }}
       >
         <p>
-          Hieeee Kiddo, I wanted to make your birthday a little more special. I know its just simple website but I couldn't gift you any thing because yk, we can't meet!😭. I hope you like this I love you bby always!!!💖
+          Hieeee Buddy, I wanted to make your birthday a little more special. I know it’s just a simple website, but I still wanted to do something for you since we can’t meet 😭. I hope you like it and have the happiest birthday ever!! 💖
         </p>
         <p>
 

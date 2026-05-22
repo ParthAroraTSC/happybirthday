@@ -6,10 +6,10 @@ import { Heart } from "lucide-react";
 
 export default function MemoryGallery() {
   const memories = [
-    { id: 1, caption: "Hiee Beautiful!!!", message: "You were looking so gorgeous in this pink saree. When I saw you that day I was stunned by how beautiful you were looking!!💖", angle: -3, delay: 0.1, type: "image", src: "/first-poloroid.jpeg" },
-    { id: 2, caption: "My fav photo!!!", message: "Remember this photo? We were adoreing this photo so muchhh!!", angle: 2, delay: 0.3, isLandscape: true, rotateMedia: true, type: "image", src: "/second-poloroid.jpeg" },
-    { id: 3, caption: "First time in the same frame!!!", message: "Our first ever snap together! I remember we were doing a fit check lol!!", angle: -2, delay: 0.5, isLandscape: true, rotateMedia: true, type: "video", src: "/third-poloroid.mp4" },
-    { id: 4, caption: "Fomo moment!!", message: "Mann!! I wanted to click a some good photos with you but I was so nervous😭😭 I couldn't even keep my hand on your shoulder properly🤦‍♂️", angle: 4, delay: 0.7, type: "image", src: "/fouth-poloroid.jpeg", objectPosition: "top" },
+    { id: 1, caption: "Hiee Beautiful!!!", message: "You were looking so gorgeous in this pink saree. When I saw you that day I was stunned by how beautiful you were looking!!💖", angle: -3, delay: 0.1, type: "image", src: "/first-poloroid.jpg" },
+    { id: 2, caption: "My fav photo!!!", message: "Remember this photo? We were adoreing this photo so muchhh!!", angle: 2, delay: 0.3, isLandscape: true, rotateMedia: true, type: "image", src: "/second-poloroid.png" },
+    { id: 3, caption: "First time in the same frame!!!", message: "Our first ever snap together! I remember we were doing a fit check lol!!", angle: -2, delay: 0.5, isLandscape: true, rotateMedia: true, type: "image", src: "/third-poloroid.png" },
+    { id: 4, caption: "Fomo moment!!", message: "Mann!! I wanted to click some good photos with you, but I was so nervous 😭😭 I couldn’t even pose properly 🤦♂️ Next time we’ll definitely click better pictures together!", angle: 4, delay: 0.7, type: "image", src: "/second-poloroid.png", objectPosition: "top" },
   ];
 
   return (

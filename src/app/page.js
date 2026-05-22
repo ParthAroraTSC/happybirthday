@@ -50,7 +50,7 @@ export default function Home() {
             <div className={styles.iconWrapper}>
               <Gift size={48} color="#e06c75" />
             </div>
-            <h1 className={styles.title}>Hiee Nancyy!!!</h1>
+            <h1 className={styles.title}>Hiee Shiku!!!</h1>
             <p className={styles.message}>I have a small gift for you... Will you please accept it? 💖</p>
             
             <div className={styles.buttonGroup}>
